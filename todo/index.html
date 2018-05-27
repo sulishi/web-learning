@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="master.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>ToDo</h1>
+        <ul class="tab">
+            <li class="active">未完成</li>
+            <li>已完成</li>
+        </ul>
+        <button class="add">添加</button>
+    </div>
+    <div class="mask"></div>
+    <div class="main">
+        <div class="unfinish tab-content">
+            <span class="tip">——学习——</span>
+            <ul class="study"></ul>
+            <span class="tip">——工作——</span>
+            <ul class="work"></ul>
+            <span class="tip">——生活——</span>
+            <ul class="life"></ul>
+        </div>
+        <div class="finish tab-content">
+            <span class=" tip ">——学习——</span>
+            <ul class="study " style="background:#ccc;">
+            </ul>
+            <span class="tip">——工作——</span>
+            <ul class="work" style="background:#ccc;">
+            </ul>
+            <span class="tip">——生活——</span>
+            <ul class="life" style="background:#ccc;">
+            </ul>
+        </div>
+    </div>
+    <div class="listadd">
+        <div class="box"><input class="close" type="button" value="x" name="关闭"></div>
+        <input placeholder="todo..." type="text" name="list" class="addtext" clientidmode="Static">
+        <select class="chose">
+		    <option title="1">学习</option>
+		    <option title="2">工作</option>
+		    <option title="3">生活</option>
+	    </select>
+        <a href="javascript:void(0)" class="confirm btn" onclick="Ajaxtext()">确认</a>
+        <a href="javascript:void(0)" class="cancel btn">取消</a>
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>
