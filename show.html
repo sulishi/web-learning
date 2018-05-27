@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>页内显示图片</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+<body>
+<h1>选择你喜欢的照片打开</h1>
+<ul>
+	<li><a href="1.jpg"><img src="1.jpg"></a></li>
+	<li><a href="2.jpg"><img src="2.jpg"></a></li>
+	<li><a href="3.jpg"><img src="3.jpg"></a></li>
+	<li><a href="猫.jpg"><img src="猫.jpg"></a></li>
+</ul>
+<img id="image" style="border:2px solid #ddd;width:400px;height:300px" src="猫.jpg" alt="hhhh">
+<script type="text/javascript">
+function show(attr){
+		var getL= attr.getAttribute("href");
+        var sho = document.getElementById("image");
+ 		sho.setAttribute("src",getL);
+	}
+window.onload = function()
+{
+	var links = document.getElementsByTagName('a');
+	for(var i=0;i<links.length;i++)
+	{
+			links[i].onclick = function()
+			{
+				show(this);
+				return false;
+			}
+	}
+}
+var para = document.createElement("p");
+var node = document.createTextNode("this photo");
+para.appendChild(node);
+var a=document.getElementsByTagName("li")[0];
+a.appendChild(node);
+</script>
+</baody>
+</html>
